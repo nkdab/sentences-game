@@ -1,12 +1,12 @@
 import { MOVE_TO_ANSWER, MOVE_TO_QUESTION } from "../constants";
 
-export const moveToQuestion = payload => {
+export const moveToQuestion = id => {
   return {
     type: MOVE_TO_QUESTION,
-    payload,
+    payload: { id },
   };
 };
 
-export const moveToAnswer = payload => {
-  return { type: MOVE_TO_ANSWER, payload };
+export const moveToAnswer = id => {
+  return { type: MOVE_TO_ANSWER, payload: { id } };
 };

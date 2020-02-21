@@ -1,21 +1,20 @@
 import React from "react";
 import PlayArea from "../PlayArea/PlayArea";
 import { useSelector, useDispatch } from "react-redux";
+import { moveToQuestion, moveToAnswer } from "../../actions/gameActions";
 
 const GameBoard = () => {
-  // const [state, dispatch] = useReducer(reducer, initialState);
-
   const answerData = useSelector(state => state.answerData);
   const questionData = useSelector(state => state.questionData);
   const dispatch = useDispatch();
 
   const handleAnswerItemClick = (e, id) => {
     e.preventDefault();
-    dispatch({ type: "MOVE_TO_QUESTION", payload: { id } });
+    dispatch(moveToQuestion(id));
   };
   const handleQuestionItemClick = (e, id) => {
     e.preventDefault();
-    dispatch({ type: "MOVE_TO_ANSWER", payload: { id } });
+    dispatch(moveToAnswer(id));
   };
   return (
     <div>
