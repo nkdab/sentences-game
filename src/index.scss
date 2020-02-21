@@ -1,6 +1,14 @@
 @import "../node_modules/materialize-css/sass/materialize.scss";
 
+/*
+* Colors:
+* #26A69A btn
+* #334B48 dark
+* #96B1AC light
+*/
+
 body {
+  background: #96b1ac;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

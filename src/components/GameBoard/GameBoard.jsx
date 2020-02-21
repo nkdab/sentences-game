@@ -2,6 +2,7 @@ import React from "react";
 import PlayArea from "../PlayArea/PlayArea";
 import { useSelector, useDispatch } from "react-redux";
 import { moveToQuestion, moveToAnswer } from "../../actions/gameActions";
+import "./GameBoard.scss";
 
 const GameBoard = () => {
   const answerData = useSelector(state => state.answerData);
@@ -17,7 +18,7 @@ const GameBoard = () => {
     dispatch(moveToAnswer(id));
   };
   return (
-    <div>
+    <div className="game-board">
       <PlayArea items={answerData} onItemClick={handleAnswerItemClick} />
       <PlayArea items={questionData} onItemClick={handleQuestionItemClick} />
     </div>

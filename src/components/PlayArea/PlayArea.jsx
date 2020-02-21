@@ -1,5 +1,6 @@
 import React from "react";
 import PlayItem from "../PlayItem";
+import "./PlayArea.scss";
 
 const PlayArea = ({ items, onItemClick }) => {
   const dataItems = items.map(item => (
@@ -11,7 +12,7 @@ const PlayArea = ({ items, onItemClick }) => {
     />
   ));
   return (
-    <div className="card">
+    <div className="card play-area">
       <div className="card-content">{dataItems}</div>
     </div>
   );
