@@ -5,15 +5,17 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { gameReducer } from "../../reducers/gameReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
+import NavBar from "../NavBar";
 
 const store = createStore(gameReducer, composeWithDevTools());
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <NavBar />
+      <main className="App">
         <GameBoard />
-      </div>
+      </main>
     </Provider>
   );
 }

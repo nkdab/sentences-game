@@ -1,3 +1,8 @@
 .play-area {
   min-height: 35vh;
 }
+
+.game-board__buttons_container {
+  display: flex;
+  justify-content: space-between;
+}

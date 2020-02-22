@@ -1,6 +1,9 @@
 import { MOVE_TO_ANSWER, MOVE_TO_QUESTION } from "../constants";
 
 const initialState = {
+  question: "Что ты творишь?",
+  answer: "what are you doing ?",
+  isMatched: false,
   questionData: [
     {
       id: 1,

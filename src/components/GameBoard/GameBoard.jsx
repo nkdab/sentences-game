@@ -17,10 +17,30 @@ const GameBoard = () => {
     e.preventDefault();
     dispatch(moveToAnswer(id));
   };
+  const handleAnswerButtonClick = () => {
+    window.alert("Ну молодец, чо");
+  };
+  const handleExitButtonClick = () => {
+    window.alert("Дверь показать?");
+  };
   return (
     <div className="game-board">
       <PlayArea items={answerData} onItemClick={handleAnswerItemClick} />
       <PlayArea items={questionData} onItemClick={handleQuestionItemClick} />
+      <div className="game-board__buttons_container">
+        <button
+          className="btn is-primary is-large"
+          onClick={handleExitButtonClick}
+        >
+          Выход
+        </button>
+        <button
+          className="btn is-primary is-large"
+          onClick={handleAnswerButtonClick}
+        >
+          Ответить
+        </button>
+      </div>
     </div>
   );
 };
