@@ -1,12 +1,35 @@
-import { MOVE_TO_ANSWER, MOVE_TO_QUESTION } from "../constants";
+import {
+  END_VALIDATE_ANSWER,
+  MOVE_TO_ANSWER,
+  MOVE_TO_QUESTION,
+  START_VALIDATE_ANSWER,
+  TOGGLE_MATCHED,
+  VALIDATE_ANSWER
+} from "../constants";
 
 export const moveToQuestion = id => {
   return {
     type: MOVE_TO_QUESTION,
-    payload: { id },
+    payload: { id }
   };
 };
 
 export const moveToAnswer = id => {
   return { type: MOVE_TO_ANSWER, payload: { id } };
+};
+
+export const toggleValidating = () => {
+  return { type: VALIDATE_ANSWER };
+};
+
+export const toggleMatched = () => {
+  return { type: TOGGLE_MATCHED };
+};
+
+export const startValidateAnsewr = () => {
+  return { type: START_VALIDATE_ANSWER };
+};
+
+export const endValidateAnswer = () => {
+  return { type: END_VALIDATE_ANSWER };
 };

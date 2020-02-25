@@ -3,11 +3,16 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-brand"></div>
-      <div className="navbar-menu"></div>
-      <div className="navbar-end"></div>
-    </nav>
+    <div className="navbar-fixed">
+      <nav>
+        <div className="nav-wrapper navbar">
+          <a href="/" className="brand-logo left">
+            Sg
+          </a>
+          <div className="nav-content center">SENTENCES GAME</div>
+        </div>
+      </nav>
+    </div>
   );
 };
 
