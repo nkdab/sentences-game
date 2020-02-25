@@ -4,7 +4,7 @@ import {
   MOVE_TO_QUESTION,
   START_VALIDATE_ANSWER,
   TOGGLE_MATCHED,
-  VALIDATE_ANSWER
+  TOGGLE_VALIDATING
 } from "../constants";
 
 export const moveToQuestion = id => {
@@ -19,7 +19,7 @@ export const moveToAnswer = id => {
 };
 
 export const toggleValidating = () => {
-  return { type: VALIDATE_ANSWER };
+  return { type: TOGGLE_VALIDATING };
 };
 
 export const toggleMatched = () => {

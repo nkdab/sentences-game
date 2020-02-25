@@ -15,14 +15,12 @@ const GameBoard = () => {
     if (isValidating) {
       if (isMatched) {
         window.alert("Yep!");
-
       } else {
         window.alert("Nope!");
       }
-
       dispatch(endValidateAnswer());
     }
-  });
+  },[dispatch, isMatched, isValidating]);
 
   const handleAnswerItemClick = (e, id) => {
     e.preventDefault();

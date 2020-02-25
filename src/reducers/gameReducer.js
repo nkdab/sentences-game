@@ -3,7 +3,7 @@ import {
   MOVE_TO_ANSWER,
   MOVE_TO_QUESTION,
   TOGGLE_MATCHED,
-  VALIDATE_ANSWER
+  TOGGLE_VALIDATING
 } from "../constants";
 
 const initialState = {
@@ -60,7 +60,7 @@ export const gameReducer = (state = initialState, action) => {
           item => item.id !== action.payload.id
         )
       };
-    case VALIDATE_ANSWER:
+    case TOGGLE_VALIDATING:
       return { ...state, isValidating: !state.isValidating };
     case TOGGLE_MATCHED:
       return { ...state, isMatched: !state.isMatched };
